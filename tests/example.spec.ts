@@ -23,9 +23,7 @@ for (let i = 0; i < webPath.length; i++) {
   test(`PC | ${webPath[i]}`, async ({ page }) => {
     await screenshotByDevice(page, webPath[i]);
   });
-}
 
-for (let i = 0; i < webPath.length; i++) {
   test(`SP | ${webPath[i]}`, async ({ page }) => {
     await screenshotByDevice(page, webPath[i], {
       width: 375,
