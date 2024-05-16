@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsx src/index.mts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "playwright test",
+    "report": "playwright test --reporter=html"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
     "playwright": "^1.44.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.44.0",
     "@types/node": "^20.12.12",
     "tsx": "^4.10.2",
     "typescript": "^5.4.5"

@@ -8,24 +8,21 @@
 git clone git@github.com:komtaki/webpage-diff.git
 ```
 
-### 1. imageMagic をinstall
+## テスト実行
 
-差分抽出の処理をするために [ImageMagick](https://imagemagick.org/) を使用する
-
-```
-brew install imagemagick
+```sh
+docker compose run --rm app
 ```
 
-### 2. imageを実行
+HTMLレポートのサーブ
 
-```
-docker compose run app
-```
+現状localで実行する。
 
-## 差分抽出処理の実行
+http://localhost:9323
 
-### 2. コマンド実行
-
-```
-./diff
+```sh
+## local
+npx playwright show-report
+## in container
+docker compose run --rm app npm run report
 ```

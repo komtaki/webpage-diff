@@ -4,6 +4,9 @@ services:
   app:
     build: .
     volumes:
-      - ./src:/app/src
-      - ./images:/app/images
+      - ./package.json:/app/package.json
+      - ./tests:/app/tests
+      - ./playwright-report:/app/playwright-report
     network_mode: host
+    ports:
+      - 9323:9323
